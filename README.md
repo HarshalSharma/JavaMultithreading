@@ -19,17 +19,17 @@ Description:
   - <b>ProducerConsumer</b>: Using BlockingQueue implemented a Producer and Consumer pattern, where Producer wait for space in BlockingQueue and Consumer consume data from BlockingQueue after fixed intervals.
   - <b>WaitAndNotify</b>: Using wait and notify method with Intrinsic locks/monitor locks to set thread synchronization between consumer and producer.
   - <b>LowLevelSync</b>: Implementing Producer and consumer with basic LinkedList, counter and a lock.
+  
+  
 <b>4. Locks:</b>
   - <b>ReEntrantLocks</b>: Renetrant locks are locks which can be locked many times and require that much unlock for the thread to continue, can be used in cases where multiple threads are working on the same unit of work and a kind of synchronization is required between them.
   - <b>Semaphores</b>: semaphores are like locks on resources or something that is available only in quantity managed by semaphores. They are used to control access to some resource, a one permit semaphore is like a lock, so once a thread have acquired and no more semaphores are available then other threads have to wait.
   - <b>Deadlock</b>: If you lock lock1 then lock2 in first thread and lock2 first in second thread then lock 1, it would result in deadlock, because both threads are waiting for locks which are already locked by them.
-  because the first thread have already taken lock over the first lock and it is not ready to give it up and similar situation is for the second lock.
-  
-  we can solve it by always having our lock in same order OR
-  we can write a method which try to acquire both locks if it succeeds then we return else
-  we wait for some time and try to acquire the locks again.
+  because the first thread have already taken lock over the first lock and it is not ready to give it up and similar situation is for the second lock. we can solve it by always having our lock in same order OR
+we can write a method which try to acquire both locks if it succeeds then we return else
+we wait for some time and try to acquire the locks again.
  
-<b>3. callableAndFuture:</b>
+<b>5. callableAndFuture:</b>
   - <b>CallableAndFuture</b>: To get a return result from a thread on completed it's work, we can use Callable and Future.
   - <b>InterruptingThreads</b>: Thread Interruption with basic thread.interrupt method, and how to handle interruption gracefully.
   - <b>InterruptingThreadsInPools</b>: Interuppting many threads in executors.
